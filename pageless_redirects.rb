@@ -2,7 +2,7 @@
 #
 # Generates redirect pages based on YAML or htaccess style redirects
 #
-# To generate redirects create either (or both) _redirects.yml or _redirects.htaccess in the Jekyll root directory
+# To generate redirects create _redirects.yml, _redirects.htaccess, and/or _redirects.json in the Jekyll root directory
 # both follow the pattern alias, final destination.
 #
 # Example _redirects.yml
@@ -31,14 +31,16 @@
 #
 # Example _redirects.json
 #
-# {
-#     "yolo": "/twerk",
-#     "loons": "/awesome"
-# }
+#   {
+#     "some-page"        : "/destination-page",
+#     "yet-another-page" : "http://example.org/destination-page",
+#     "ninth-page"       : "/destination-page"
+#   }
 #
 #  Result:
-#   Requests to /yolo are redirected to /twerk
-#   Requests to /loons are redirected to /awesome
+#   Requests to /some-page are redirected to /destination-page
+#   Requests to /yet-another-page are redirected to http://example.org/destination-page
+#   Requests to /ninth-page are redirected to /destination-page
 #
 #
 # Author: Nick Quinlan

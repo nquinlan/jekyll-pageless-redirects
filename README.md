@@ -6,7 +6,7 @@ Redirect any number of pages with one file. Supports htaccess style redirects.
 ## Usage
 Install `pageless_redirects.rb` in your plugins directory (`_plugins` in vanilla Jekyll, `plugins` in Octopress).
 
-To generate redirects create `_redirects.yml`, `_redirects.htaccess`, and/or `_redirects.json` in the Jekyll root directory. Both follow the pattern `alias`, `final destination`.
+To generate redirects create `_redirects.yml`, `_redirects.htaccess`, and/or `_redirects.json` in the Jekyll root directory. All follow the pattern `alias`, `final destination`.
 
 ### Sample `_redirects.yml`
 
@@ -35,14 +35,16 @@ To generate redirects create `_redirects.yml`, `_redirects.htaccess`, and/or `_r
 ### Sample `_redirects.json`
 
 	{
-		"yolo": "/twerk",
-		"loons": "/awesome"
+		"some-page"        : "/destination-page",
+		"yet-another-page" : "http://example.org/destination-page",
+		"ninth-page"       : "/destination-page"
 	}
 
 #### Result
 
-* Requests to `/yolo` are redirected to `/twerk`
-* Requests to `/loons` are redirected to `/awesome`
+* Requests to `/some-page` are redirected to `/destination-page`
+* Requests to `/yet-another-page` are redirected to `http://example.org/destination-page`
+* Requests to `/ninth-page` are redirected to `/destination-page`
 
 ## Credit
 This plugin borrows _heavily_ from [Jekyll Alias Generator](https://github.com/tsmango/jekyll_alias_generator) by [Thomas Mango](http://thomasmango.com)
