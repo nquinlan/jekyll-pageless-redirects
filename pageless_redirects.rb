@@ -29,11 +29,25 @@
 #   Requests to /cool-page are redirected to http://example.org/destination-page
 #
 #
+# Example _redirects.json
+#
+# {
+#     "yolo": "/twerk",
+#     "loons": "/awesome"
+# }
+#
+#  Result:
+#   Requests to /yolo are redirected to /twerk
+#   Requests to /loons are redirected to /awesome
+#
+#
 # Author: Nick Quinlan
 # Site: http://nicholasquinlan.com
 # Plugin Source: http://github.com/nquinlan/jekyll-pageless-redirect
 # Plugin License: MIT
 # Plugin Credit: This plugin borrows heavily from alias_generator (http://github.com/tsmango/jekyll_alias_generator) by Thomas Mango (http://thomasmango.com)
+
+require 'json'
 
 module Jekyll
 
@@ -44,6 +58,7 @@ module Jekyll
 
       process_yaml
       process_htaccess
+      process_json
     end
 
     def process_yaml
@@ -65,6 +80,18 @@ module Jekyll
           /^Redirect(\s+30[1237])?\s+(.+?)\s+(.+?)$/.match(line) { | matches |
             generate_aliases( matches[3], matches[2])
           }
+        end
+        file.close
+      end
+    end
+
+    def process_json
+      file_path = @site.source + "/_redirects.json"
+      if File.exists?(file_path)
+        file = File.new(file_path, "r")
+        content = JSON.parse(file.read)
+        content.each do |a, b|
+            generate_aliases(a, b)
         end
         file.close
       end
