@@ -1,7 +1,7 @@
 # Jekyll Pageless Redirects
 Redirect any number of pages with one file. Supports htaccess style redirects.
 
-**Note**: "Pageless" indicates you don't need to create new _pages or _posts to make the redirects occur. Pages are still generated and follow the tried and true `http-equiv="refresh"` method of redirection. _This means the plugin **will** work on Github pages or anywhere else that doesn't read .htaccess files._
+**Note**: "Pageless" indicates you don't need to create new `_pages` or `_posts` to make the redirects occur. Pages are still generated and follow the tried and true `http-equiv="refresh"` method of redirection. _This means the plugin **will** work on Github pages or anywhere else that doesn't read .htaccess files._
 
 ## Usage
 Install `pageless_redirects.rb` in your plugins directory (`_plugins` in vanilla Jekyll, `plugins` in Octopress).
@@ -16,9 +16,9 @@ To generate redirects create either (or both) `_redirects.yml` or `_redirects.ht
 
 #### Result
 
-* Requests to /initial-page are redirected to /destination-page
-* Requests to /other-page are redirected to http://example.org/destination-page
-* Requests to /another/page are redirected to /destination-page
+* Requests to `/initial-page` are redirected to `/destination-page`
+* Requests to `/other-page` are redirected to `http://example.org/destination-page`
+* Requests to `/another/page` are redirected to `/destination-page`
 
 ### Sample `_redirects.htaccess`
 
@@ -28,9 +28,9 @@ To generate redirects create either (or both) `_redirects.yml` or `_redirects.ht
 
 #### Result
 
-* Requests to /some-page are redirected to /destination-page
-* Requests to /different-page are redirected to /destination-page
-* Requests to /cool-page are redirected to http://example.org/destination-page
+* Requests to `/some-page` are redirected to `/destination-page`
+* Requests to `/different-page` are redirected to `/destination-page`
+* Requests to `/cool-page` are redirected to `http://example.org/destination-page`
 
 ## Credit
 This plugin borrows _heavily_ from [Jekyll Alias Generator](https://github.com/tsmango/jekyll_alias_generator) by [Thomas Mango](http://thomasmango.com)
