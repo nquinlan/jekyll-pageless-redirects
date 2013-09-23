@@ -135,6 +135,10 @@ module Jekyll
       <meta http-equiv="content-type" content="text/html; charset=utf-8" />
       <meta http-equiv="refresh" content="0; url=#{destination_path}" />
       </head>
+      <body>
+        <p><strong>Redirecting...</strong></p>
+        <p><a href='#{destination_path}'>Click Here</a> if you are not redirected</p>
+      </body>
       </html>
       EOF
     end
