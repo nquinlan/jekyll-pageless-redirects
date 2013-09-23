@@ -45,7 +45,7 @@
 #
 # Author: Nick Quinlan
 # Site: http://nicholasquinlan.com
-# Plugin Source: http://github.com/nquinlan/jekyll-pageless-redirect
+# Plugin Source: https://github.com/nquinlan/jekyll-pageless-redirects
 # Plugin License: MIT
 # Plugin Credit: This plugin borrows heavily from alias_generator (http://github.com/tsmango/jekyll_alias_generator) by Thomas Mango (http://thomasmango.com)
 
