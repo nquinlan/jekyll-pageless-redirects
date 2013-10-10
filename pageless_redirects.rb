@@ -137,7 +137,10 @@ module Jekyll
       </head>
       <body>
         <p><strong>Redirecting...</strong></p>
-        <p><a href='#{destination_path}'>Click Here</a> if you are not redirected</p>
+        <p><a href='#{destination_path}'>Click here if you are not redirected.</a></p>
+        <script>
+          document.location.href = "#{destination_path}";
+        </script>
       </body>
       </html>
       EOF
