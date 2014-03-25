@@ -93,7 +93,7 @@ module Jekyll
         file = File.new(file_path, "r")
         content = JSON.parse(file.read)
         content.each do |a, b|
-            generate_aliases(a, b)
+            generate_aliases(b, a)
         end
         file.close
       end
