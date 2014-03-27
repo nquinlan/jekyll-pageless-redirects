@@ -92,8 +92,8 @@ module Jekyll
       if File.exists?(file_path)
         file = File.new(file_path, "r")
         content = JSON.parse(file.read)
-        content.each do |a, b|
-            generate_aliases(b, a)
+        content.each do |new_url, old_url|
+            generate_aliases(old_url, new_url)
         end
         file.close
       end
