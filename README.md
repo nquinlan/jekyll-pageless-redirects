@@ -1,7 +1,7 @@
 # Jekyll Pageless Redirects
 Redirect any number of pages with one file. Supports htaccess style redirects.
 
-**Note**: "Pageless" indicates you don't need to create new `_pages` or `_posts` to make the redirects occur. Pages are still generated and follow the tried and true `http-equiv="refresh"` method of redirection. _This means the plugin **will** work on Github pages or anywhere else that doesn't read .htaccess files._
+**Note**: "Pageless" indicates you don't need to create new `_pages` or `_posts` to make the redirects occur. Pages are still generated and follow the tried and true `http-equiv="refresh"` method of redirection. _This means the plugin **will** work on Github pages (if you generate your site and push it to `gh-pages`) or anywhere else that doesn't read .htaccess files._
 
 ## Usage
 Install `pageless_redirects.rb` in your plugins directory (`_plugins` in vanilla Jekyll, `plugins` in Octopress).
